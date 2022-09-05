@@ -397,7 +397,7 @@ def forecast(self: RNN, Y_df, X_df = None, S_df = None, batch_size=1, trainer=No
 
     if trainer is None:
         gpus = -1 if t.cuda.is_available() else 0
-        trainer = pl.Trainer(progress_bar_refresh_rate=1,
+        trainer = pl.Trainer(
                              gpus=gpus,
                              logger=False)
 

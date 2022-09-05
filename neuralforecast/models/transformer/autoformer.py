@@ -392,7 +392,7 @@ def forecast(self: Autoformer, Y_df: pd.DataFrame, X_df: pd.DataFrame = None, S_
 
     if trainer is None:
         gpus = -1 if torch.cuda.is_available() else 0
-        trainer = pl.Trainer(progress_bar_refresh_rate=1,
+        trainer = pl.Trainer(
                              gpus=gpus,
                              logger=False)
 

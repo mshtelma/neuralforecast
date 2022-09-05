@@ -788,7 +788,7 @@ def forecast(self: NBEATS, Y_df: pd.DataFrame, X_df: pd.DataFrame = None, S_df: 
 
     if trainer is None:
         gpus = -1 if t.cuda.is_available() else 0
-        trainer = pl.Trainer(progress_bar_refresh_rate=1,
+        trainer = pl.Trainer(
                              gpus=gpus,
                              logger=False)
 
@@ -866,7 +866,7 @@ def predict(self: NBEATS, Y_df: pd.DataFrame, X_df: pd.DataFrame = None, S_df: p
 
     if trainer is None:
         gpus = -1 if t.cuda.is_available() else 0
-        trainer = pl.Trainer(progress_bar_refresh_rate=1,
+        trainer = pl.Trainer(
                              gpus=gpus,
                              logger=False)
 

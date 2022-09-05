@@ -361,7 +361,6 @@ class NBEATSEnsemble:
 
                     trainer = pl.Trainer(max_steps=hparams_ensemble['n_steps'],
                                          gradient_clip_val=0,
-                                         progress_bar_refresh_rate=50,
                                          gpus=self.gpus,
                                          auto_select_gpus=self.auto_select_gpus,
                                          check_val_every_n_epoch=val_freq_steps,
